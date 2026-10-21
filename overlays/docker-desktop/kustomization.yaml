@@ -1,0 +1,15 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+namespace: order-platform
+resources:
+  - ../../base
+images:
+  - name: order-service
+    newName: order-service
+    newTag: local
+  - name: catalog-service
+    newName: catalog-service
+    newTag: local
+  - name: order-platform-ui
+    newName: order-platform-ui
+    newTag: local
